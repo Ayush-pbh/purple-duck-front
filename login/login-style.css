@@ -62,6 +62,7 @@ body {
     align-items: center;
     font-family: 'Oxygen';
     
+    
 }
 
 #particles-js{
@@ -88,6 +89,7 @@ body {
     border-color: rgb(0, 0, 0);
     padding-top: 20px;
     padding-bottom: 20px;
+    
 
   }
 
@@ -130,6 +132,11 @@ body {
 
   }
 
+  .creds:focus {
+    transition: transform 0.2s ease;
+    transform: scale(1.1);
+  }
+
   h1{
     font-family: 'Jost';
     font-size: 2rem;
@@ -144,8 +151,22 @@ body {
   }
 
   .fa-droplet {
-    font-size: 4rem;
+    font-size: 3rem;
     color:  rgba(254, 63, 63, 0.848);
+    animation: gradient 5s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      color:  rgba(254, 63, 63, 0.848);;
+    }
+    50% {
+      color:  rgba(255, 8, 8, 0.848);;
+    }
+    100% {
+        color:  rgba(254, 63, 63, 0.848);;
+      }
+      50% {
   }
 
   .sign-up {
@@ -158,9 +179,7 @@ body {
   }
 
   hr {
-    background-color: rgba(132, 132, 132, 0.237);
-    border-style: dashed;
-    border-width: 1px;
+    
   }
 
   .fa-wallet {
