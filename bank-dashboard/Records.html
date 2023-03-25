@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="dashboard-bank-styles.css" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script
-      src="https://kit.fontawesome.com/714154d971.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost&family=Oxygen&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="dashboard-bank-styles.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script src="https://kit.fontawesome.com/714154d971.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost&family=Oxygen&display=swap" rel="stylesheet">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="description" content="" />
-    <title>Records</title>
+    <title>Record</title>
     <link
       href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css"
       rel="stylesheet"
@@ -130,7 +121,6 @@
         addEventListener("load", prefetchAssets);
       })();
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.min.js"></script>
 
     <script id="web-pixels-manager-setup">
       (function e(e, n, a, t, o, r) {
@@ -368,7 +358,9 @@
       <div class="navbar-fixed">
         <nav class="navbar white">
           <div class="nav-wrapper">
-            <a href="#!" class="brand-logo grey-text text-darken-4">Records</a>
+            <a href="#!" class="brand-logo grey-text text-darken-4"
+              >Record</a
+            >
             <ul id="nav-mobile" class="right">
               <li class="hide-on-med-and-down">
                 <a href="/products/admin">Balance</a>
@@ -397,23 +389,19 @@
         </nav>
       </div>
       <ul id="sidenav-left" class="sidenav sidenav-fixed">
-        <li>
-          <a href="/pages/admin-dashboard" class="logo-container"
-            ><i class="material-icons left">spa</i> Purple-Duck</a
-          >
+        <li><li><a href="/pages/admin-dashboard" class="logo-container"><i class="fa-solid fa-droplet"></i> Purple-Duck</a>
+            </li>
         </li>
         <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
-            <li class="bold waves-effect active">
-              <a href="transactions.html">Transactions</a>
+            <li id="btn-nbt" class="bold waves-effect">
+              <a  href="dashboard-bank-index.html">Home</a>
             </li>
-            <li class="bold waves-effect">
-              <a href="dashboard-bank-index.html">Home</a>
-            </li>
-            <li class="bold waves-effect"><a>New Donations</a></li>
-            <li class="bold waves-effect"><a>New Receptions</a></li>
-            <li class="bold waves-effect"><a>Stats</a></li>
-            <li class="bold waves-effect">
+            <li  id="btn-nbt" class="bold waves-effect"><a>New Donations</a></li>
+            <li id="btn-nbt" class="bold waves-effect"><a>New Receptions</a></li>
+            <li id="btn-nbt" class="bold waves-effect"><a>Stats</a></li>
+            <li id="btn-nbt" class="bold waves-effect"><a href="issues.html">Issues</a></li>
+            <li id="btn-nbt" class="bold waves-effect">
               <a>Account</a>
               <div class="collapsible-body">
                 <ul>
@@ -471,24 +459,7 @@
             <a href="#friends" class="active">Friends</a>
           </li>
         </ul>
-        <div id="settings" class="col s12">
-          <div class="settings-group">
-            <div class="setting">
-              Night Mode
-              <div class="switch right">
-                <label>
-                  <input type="checkbox" /><span class="lever"></span>
-                </label>
-              </div>
-            </div>
-            <div class="setting">
-              Beta Testing
-              <label class="right">
-                <input type="checkbox" /><span></span>
-              </label>
-            </div>
-          </div>
-        </div>
+            
         <div id="friends" class="col s12">
           <ul class="collection flush">
             <li class="collection-item avatar">
@@ -533,79 +504,33 @@
       </div>
     </header>
     <main style="padding: 30px">
-      <div class="col s12">
-        <div>
-          <canvas id="myChart"></canvas>
-        </div>
-
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-        <script>
-          const ctx = document.getElementById("myChart");
-
-          // new Chart(ctx, {
-          //   type: 'bar',
-          //   data: {
-          //     labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-          //     datasets: [{
-          //       label: '# of Votes',
-          //       data: [12, 19, 3, 5, 2, 3],
-          //       borderWidth: 1
-          //     }]
-          //   },
-          //   options: {
-          //     scales: {
-          //       y: {
-          //         beginAtZero: true
-          //       }
-          //     }
-          //   }
-          // });
-          new Chart(ctx, {
-            type: "line",
-            data: {
-              // labels: labels,
-              datasets: [
-                {
-                  label: "My First Dataset",
-                  data: [65, 59, 80, 81, 56, 55, 40],
-                  fill: false,
-                  borderColor: "rgb(75, 192, 192)",
-                  tension: 0.1,
-                },
-              ],
-            },
-          });
-        </script>
+      <div>
+        <canvas id="myChart"></canvas>
       </div>
-
-      <div class="col s12">
-        <div>
-          <canvas id="myChart2"></canvas>
-        </div>
-
-        <script>
-          const ctx1 = document.getElementById("myChart2");
-
-          //             new Chart(ctx1, {
-          //   type: 'line',
-          //   data: data,
-          //   options: {
-          //     responsive: true,
-          //     plugins: {
-          //       legend: {
-          //         position: 'top',
-          //       },
-          //       title: {
-          //         display: true,
-          //         text: 'Chart.js Line Chart'
-          //       }
-          //     }
-          //   },
-          // };
-        </script>
-      </div>
-
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+              label: '# of Votes',
+              data: [12, 19, 3, 5, 2, 3],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+             
       <div class="col s12">
         <div class="card">
           <table
@@ -626,10 +551,10 @@
                   ></label>
                 </th>
                 <th>ID</th>
-                <th>Date Received</th>
+                <th>Blood Type</th>
+                <th>Date Collected</th>
                 <th>Expires on</th>
-                <th>Blood-group</th>
-                <th>volume</th>
+                <th>Trans. fee</th>
               </tr>
             </thead>
 
