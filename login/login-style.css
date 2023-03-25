@@ -158,9 +158,11 @@ body {
   }
 
   hr {
-    
+    background-color: rgba(132, 132, 132, 0.237);
+    border-style: dashed;
+    border-width: 1px;
   }
 
   .fa-wallet {
-    color: rgb(251, 251, 251);;
+    color: rgb(251, 251, 251);
   }
