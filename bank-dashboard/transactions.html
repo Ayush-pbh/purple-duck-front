@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="">
-    <title>Dashboard - Admin</title>
+    <title>Transactions</title>
     <link href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css" rel="stylesheet">
     <link href="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/jqvmap.css?v=162757563705857184351528499283" rel="stylesheet">
     <link href="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/flag-icon.min.css?v=107574258948483483761528499307" rel="stylesheet">
@@ -66,7 +66,7 @@
     <header>
       <div class="navbar-fixed">
         <nav class="navbar white">
-          <div class="nav-wrapper"><a href="#!" class="brand-logo grey-text text-darken-4">Home</a>
+          <div class="nav-wrapper"><a href="#!" class="brand-logo grey-text text-darken-4">Transactions</a>
             <ul id="nav-mobile" class="right">
               <li class="hide-on-med-and-down"><a href="/products/admin">Balance</a></li>
               <li class="hide-on-med-and-down"><a href="#!" data-target="dropdown1" class="dropdown-trigger waves-effect"><i class="material-icons">notifications</i></a></li>
@@ -79,7 +79,7 @@
         <li><a href="/pages/admin-dashboard" class="logo-container"><i class="material-icons left">spa</i> Purple-Duck</a></li>
         <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
-            <li class="bold waves-effect active"><a   href="transactions.html"  >Transactions</a>
+            <li class="bold waves-effect active"><a  href="dashboard-bank-index.html"   >Home</a>
              
             </li>
             <li class="bold waves-effect"><a   href="Records.html"  >Records</a>
@@ -94,10 +94,9 @@
             <li class="bold waves-effect"><a     >Stats</a>
               
             </li>
-        </li>
-        <li class="bold waves-effect"><a  href="issues.html"   >Issues</a>
+            <li class="bold waves-effect"><a  href="issues.html"   >Issues</a>
           
-        </li>
+            </li>
             <li class="bold waves-effect"><a     >Account</a>
               <div class="collapsible-body">
                 <ul>
@@ -170,10 +169,69 @@
         </div>
       </div>
     </header>
-    <main style="padding: 30px;">
+   <main style="padding: 30px;">
+    <div class="col s12">
+        <div class="card">
+          <table id="default-table-example" class="row-border" cellspacing="0" width="100%">
+            <thead>
+              <tr>
+                <th><label><input name="select_all" value="1" id="example-select-all" type="checkbox" /><span></span></label></th>
+                <th>From</th>
+                <th>To</th>
+                <th>status</th>
+                <th>Time</th>
+                <th>Trans. Fee</th>
+                
+              </tr>
+            </thead>
 
-    </main>
-    
+            <tbody>
+              <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011/04/25</td>
+                <td>$320,800</td>
+              </tr>
+              <tr>
+                <td>Garrett Winters</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>63</td>
+                <td>2011/07/25</td>
+                <td>$170,750</td>
+              </tr>
+              <tr>
+                <td>Ashton Cox</td>
+                <td>Junior Technical Author</td>
+                <td>San Francisco</td>
+                <td>66</td>
+                <td>2009/01/12</td>
+                <td>$86,000</td>
+              </tr>
+              <tr>
+                <td>Cedric Kelly</td>
+                <td>Senior Javascript Developer</td>
+                <td>Edinburgh</td>
+                <td>22</td>
+                <td>2012/03/29</td>
+                <td>$433,060</td>
+              </tr>
+              <tr>
+                <td>Airi Satou</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>33</td>
+                <td>2008/11/28</td>
+                <td>$162,700</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+      </div>
+   </main> 
     <!-- Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.min.js"></script>
