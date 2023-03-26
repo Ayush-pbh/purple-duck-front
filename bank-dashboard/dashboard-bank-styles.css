@@ -50,3 +50,18 @@ body {
   .collapsible {
     border: 0 !important;
   }
+
+
+  .lgout {
+    background-color: red;
+    color: aliceblue;
+    border-radius: 3px;
+    border: 0 ;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .pfp {
+    width: 10%;
+    border-radius: 50%;
+  }
